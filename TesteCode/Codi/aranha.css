@@ -1,0 +1,13 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Remove scrollbars */
+    height: 100%;
+}
+
+canvas {
+    display: block;
+    background-color: #111; /* Cor de fundo do canvas */
+    width: 100vw;
+    height: 100vh;
+}

@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 400px; /* Altura definida para o slide */
+}
+
+.swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* A imagem se ajusta ao slide mantendo a proporção */
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Customização dos botões */
+.swiper-button-next, .swiper-button-prev {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Customização da paginação */
+.swiper-pagination-bullet {
+    background: #333;
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ff6347;
+}
+
+/* Customização da barra de progresso */
+.swiper-scrollbar-drag {
+    background-color: #333;
+}

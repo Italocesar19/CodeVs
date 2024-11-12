@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa com Veterinárias</title>
+    <style>
+        /* Estilo básico para o mapa */
+        #map {
+            height: 500px; /* Defina a altura do mapa */
+            width: 100%; /* O mapa ocupa toda a largura disponível */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Veterinárias Próximas</h2>
+    <div id="map"></div> <!-- O mapa será exibido aqui -->
+
+    <!-- Script do Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASVLqwafE3y2wQvqnuj1iIr92xhd9nS0U&libraries=places&callback=initMap" async defer></script>
+
+    <script>
+        // Função para inicializar o mapa
+        function initMap() {
+            // Localização inicial do mapa (Exemplo: São Paulo)
+            const mapCenter = { lat: -23.550520, lng: -46.633308 }; 
+
+            // Cria o mapa
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12, // Nível de zoom inicial
+                center: mapCenter, // Centro do mapa
+            });
+
+            // Definir as localizações de veterinárias (Exemplo com coordenadas)
+            const vetLocations = [
+                { lat: -23.561681, lng: -46.625337, nome: "Veterinária 1" },
+                { lat: -23.555407, lng: -46.632397, nome: "Veterinária 2" },
+                { lat: -23.543244, lng: -46.612889, nome: "Veterinária 3" }
+            ];
+
+            // Adiciona marcadores no mapa para cada veterinária
+            vetLocations.forEach(location => {
+                const marker = new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.nome,
+                });
+
+                // InfoWindow para mostrar o nome da veterinária ao clicar no marcador
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `<h4>${location.nome}</h4>`
+                });
+
+                // Abre a InfoWindow ao clicar no marcador
+                marker.addListener("click", () => {
+                    infoWindow.open(map, marker);
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>

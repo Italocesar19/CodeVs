@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login e Criar Conta</title>
+  <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+
+
+   <div class="main-container">
+    <div class="box-container">
+      <!-- Formulário de Login -->
+      <div class="form-container login-container">
+        <form id="loginForm">
+          <h1>Bem-vindo de volta</h1>
+          <p class="subtitle">Faça login para acessar sua conta</p>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Senha" required>
+          <button type="submit">Entrar</button>
+          <div class="divider">
+            <span>Ou continue com</span>
+          </div>
+          <div class="social-icons">
+            <a href="www." class="social-icon" id="googleRegister" title="Registrar com Google"><ion-icon name="logo-google" title="Login com Google"></ion-icon></a>
+            <a href="#" class="social-icon" id="facebookRegister" title="Registrar com Facebook"><ion-icon name="logo-facebook" title="Login com Facebook"></ion-icon></a>
+            <a href="#" class="social-icon" id="appleRegister" title="Registrar com Apple"><ion-icon name="logo-apple" title="Login com Apple"></ion-icon></a>
+          </div>
+          <p class="small-text">Não tem uma conta? <button id="toSignup" class="link-button">Criar Conta</button></p>
+        </form>
+      </div>
+
+      <!-- Formulário de Criar Conta -->
+      <div class="form-container signup-container">
+        <form id="signupForm">
+          <h1>Criar uma Conta</h1>
+          <p class="subtitle">Preencha os campos abaixo</p>
+          <input type="text" placeholder="Nome" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Senha" required>
+          <button type="submit">Registrar</button>
+          <div class="divider">
+            <span>Ou registre-se com</span>
+          </div>
+          <div class="social-icons">
+            <a href="#" class="social-icon" id="googleRegister" title="Registrar com Google"><ion-icon name="logo-google" title="Login com Google"></ion-icon></a>
+            <a href="#" class="social-icon" id="facebookRegister" title="Registrar com Facebook"><ion-icon name="logo-facebook" title="Login com Facebook"></ion-icon></a>
+            <a href="#" class="social-icon" id="appleRegister" title="Registrar com Apple"><ion-icon name="logo-apple" title="Login com Apple"></ion-icon></a>
+          </div>
+          <p class="small-text">Já tem uma conta? <button id="toLogin" class="link-button">Voltar para Login</button></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+  <script src="main2.js"></script>
+</body>
+</html>
